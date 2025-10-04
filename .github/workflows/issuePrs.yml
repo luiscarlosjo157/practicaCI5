@@ -1,0 +1,17 @@
+name: CI con Issues y PRs
+
+on:
+  issues:
+    types: [opened, edited, deleted, closed, reopened]
+  pull_request:
+    types: [opened, edited, closed, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: hola mundo
+      run: echo "Hola Mundo"
+    - name: fecha y hora
+      run: date
